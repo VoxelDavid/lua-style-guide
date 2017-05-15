@@ -36,13 +36,13 @@ This style guide is based off of [Olivine Lab's Lua Style Guide](https://github.
 
   -- bad
   local str = [[This is an incredibly long string that exceeds 80 characters
-and just keeps going. This string has no regard for your well being and will
-stop at nothing to make your life a living hell.]]
+  and just keeps going. This string has no regard for your well being and will
+  stop at nothing to make your life a living hell.]]
 
   -- bad
   local str = "This is an incredibly long string that exceeds 80 characters \
-and just keeps going. This string has no regard for your well being and will \
-stop at nothing to make your life a living hell."
+  and just keeps going. This string has no regard for your well being and will \
+  stop at nothing to make your life a living hell."
 
   -- good
   local str = "This is an incredibly long string that exceeds 80 characters "..
@@ -161,7 +161,7 @@ stop at nothing to make your life a living hell."
   local superPower = SuperPower.new()
   ```
 
-- Group top-level variables by services, dependencies, constants, and globals. Separate each group by a space.
+- Group top-level variables by services, dependencies, constants, and globals. Separate each group by a line space.
 
   ```lua
   -- bad
@@ -336,7 +336,7 @@ stop at nothing to make your life a living hell."
 
 ## Conditional Expressions & Equality
 
-- False and nil are *falsy* in conditional expressions. All else is true.
+- `false` and `nil` are *falsy* in conditional expressions. All else is true.
 
   ```lua
   local str = ""
@@ -346,7 +346,7 @@ stop at nothing to make your life a living hell."
   end
   ```
 
-- Use shortcuts when you can, unless you need to know the difference between false and nil.
+- Use shortcuts when you can, unless you need to know the difference between `false` and `nil`.
 
   ```lua
   -- bad
@@ -360,7 +360,7 @@ stop at nothing to make your life a living hell."
   end
   ```
 
-- Prefer *true* statements over *false* statements where it makes sense. Prioritize truthy conditions when writing multiple conditions.
+- Prefer `true` statements over `false` statements where it makes sense. Prioritize truthy conditions when writing multiple conditions.
 
   ```lua
   -- bad
@@ -407,7 +407,7 @@ stop at nothing to make your life a living hell."
   end
 
   -- bad
-  if test < 1 and doComplicatedFunction(test) == false or seven == 8 and nine == 10 then doOtherComplicatedFunction()end
+  if test < 1 and doComplicatedFunction(test) == false or seven == 8 and nine == 10 then doOtherComplicatedFunction() end
 
   -- good
   if test < 1 and doComplicatedFunction(test) == false or
@@ -422,7 +422,7 @@ stop at nothing to make your life a living hell."
 
 ## Whitespace
 
-Install [EditorConfig] for your text editor to have your tabs and other settings configured automatically on a per-project basis.
+Install [EditorConfig](http://editorconfig.org/) for your text editor to have your tabs and other settings configured automatically on a per-project basis.
 
 - Use soft tabs set to 2 spaces.
 
@@ -443,7 +443,7 @@ Install [EditorConfig] for your text editor to have your tabs and other settings
   end
   ```
 
-  - Place 1 space before opening and closing braces. Place no spaces around parenthesis.
+- Place 1 space before opening and closing braces. Place no spaces around parenthesis.
 
   ```lua
   -- bad
