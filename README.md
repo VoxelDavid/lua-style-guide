@@ -1,6 +1,6 @@
 # RBX.Lua Style Guide
 
-This is a style guide for ROBLOX's variant of Lua. These guidelines are to keep code consistent across projects, and allow contributors to learn exactly how to write code for those projects.
+This is a style guide for Roblox's variant of Lua. These guidelines are to keep code consistent across projects, and allow new contributors to learn exactly how to write code for those projects.
 
 This style guide is based off of [Olivine Lab's Lua Style Guide](https://github.com/Olivine-Labs/lua-style-guide).
 
@@ -28,7 +28,7 @@ This style guide is based off of [Olivine Lab's Lua Style Guide](https://github.
   local name = "John"
   ```
 
-- Strings longer than 80 characters should be concatenated. Do not use double-brackets (`[[]]`) or backslashes (`\`), line breaks and whitespace will effect them.
+- Strings longer than 80 characters should be concatenated. Do not use double-brackets (`[[]]`) or backslashes (`\`), as line breaks and whitespace will appear in them.
 
   ```lua
   -- bad
@@ -93,7 +93,7 @@ This style guide is based off of [Olivine Lab's Lua Style Guide](https://github.
   end
   ```
 
-- Prefer defining functions after variables.
+- Prefer defining variables before functions.
 
   ```lua
   -- bad
@@ -117,7 +117,7 @@ This style guide is based off of [Olivine Lab's Lua Style Guide](https://github.
 
 ## Properties
 
-- Use dot notation when accessing known properties.
+- Use dot notation when accessing properties.
 
   ```lua
   local luke = {
@@ -161,18 +161,18 @@ This style guide is based off of [Olivine Lab's Lua Style Guide](https://github.
   local superPower = SuperPower.new()
   ```
 
-- Group top-level variables by services, dependencies, constants, and globals. Separate each group by a line space.
+- Group top-level variables by services, dependencies, constants, and globals. Separate each group by a newline.
 
   ```lua
   -- bad
   local CONSTANT = true
   local global = "This can be changed"
-  local run = game:GetService("RunService")
+  local runService = game:GetService("RunService")
   local replicatedStorage = game:GetService("ReplicatedStorage")
   local module = require(replicatedStorage.ModuleScript)
 
   -- good
-  local run = game:GetService("RunService")
+  local runService = game:GetService("RunService")
   local replicatedStorage = game:GetService("ReplicatedStorage")
 
   local module = require(replicatedStorage.ModuleScript)
@@ -222,7 +222,7 @@ This style guide is based off of [Olivine Lab's Lua Style Guide](https://github.
 
 ## Classes
 
-- All classes must define a `.new()` function for instantiation. This follows ROBLOX's convention for class constructors.
+- All classes must define a `.new()` function for instantiation. This follows Roblox's convention for class constructors.
 
   ```lua
   -- bad
@@ -233,6 +233,8 @@ This style guide is based off of [Olivine Lab's Lua Style Guide](https://github.
   ```
 
 ## Naming Conventions
+
+Roblox commonly uses PascalCase for just about everything. This style guide disagrees with that choice and instead reserves PascalCase for class names and class members.
 
 - Avoid single letter names. Be descriptive with your naming. You can get away with single-letter names when they are variables in loops.
 
@@ -280,7 +282,7 @@ This style guide is based off of [Olivine Lab's Lua Style Guide](https://github.
   end
   ```
 
-- Use PascalCase for classes and properties.
+- Use PascalCase for classes and their members.
 
   ```lua
   -- bad
