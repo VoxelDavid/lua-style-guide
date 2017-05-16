@@ -453,13 +453,13 @@ Install [EditorConfig](http://editorconfig.org/) for your text editor to have yo
   local test = { one = 1 }
 
   -- bad
-  dog.set('attr',{
+  dog.set("attr",{
     Age = "1 year",
     Breed = "Bernese Mountain Dog"
   })
 
   -- good
-  dog.set('attr', {
+  dog.set("attr", {
     Age = "1 year",
     Breed = "Bernese Mountain Dog"
   })
@@ -489,13 +489,13 @@ Install [EditorConfig](http://editorconfig.org/) for your text editor to have yo
   local thing=1
   thing = thing-1
   thing = thing*1
-  thing = 'string'..'s'
+  thing = "string".."s"
 
   -- good
   local thing = 1
   thing = thing - 1
   thing = thing * 1
-  thing = 'string' .. 's'
+  thing = "string" .. "s"
   ```
 
 - Use one space after commas.
